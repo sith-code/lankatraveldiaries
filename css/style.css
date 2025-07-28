@@ -1,0 +1,600 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom, #f4f9f4, #e3f2fd);
+    color: #222;
+}
+
+/* Header section */
+header {
+    background: whitesmoke;
+    color: rgb(10, 10, 10);
+    padding: 10px 0 0 0;
+    position: relative;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* horizontally center the whole content */
+    padding: 10px 20px;
+    gap: 15px;
+    /* spacing between logo and text */
+}
+
+.logo {
+    width: 120px;
+    height: auto;
+}
+
+.logo-link {
+    display: inline-block;
+    padding: 5px;
+    margin-left: 40px;
+    /* move the logo slightly to the right */
+}
+
+.logo-link img.logo {
+    width: 90px;
+    height: auto;
+    display: block;
+}
+
+.header-text {
+    text-align: center;
+    width: 100%;
+}
+
+.header-text h1 {
+    margin: 0;
+    font-size: 2em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.slogan {
+    margin: 5px 0 10px 0;
+    font-style: italic;
+    font-size: 1.1em;
+    opacity: 0.95;
+}
+
+
+/* Navigation section */
+nav {
+    background: linear-gradient(to right, #28a745, #007bff);
+    text-align: center;
+    padding: 12px 0;
+    margin-top: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background: #08746f;
+}
+
+/* Banner section */
+.banner {
+    position: relative;
+    overflow: hidden;
+    max-height: 400px;
+}
+
+.banner-slide {
+    display: flex;
+    animation: slide 50s infinite alternate;
+}
+
+.banner-slide img {
+    width: 50%;
+    height: 400px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.banner-text {
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    color: white;
+    text-shadow: 2px 2px 6px #000;
+}
+
+.banner-text h2 {
+    font-size: 2em;
+    animation: fadeInUp 2s ease;
+}
+
+.cta-button {
+    display: inline-block;
+    background: #28a745;
+    color: white;
+    padding: 12px 25px;
+    margin-top: 15px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 1em;
+    transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #218838;
+}
+
+/* Banner animation section */
+@keyframes slide {
+    0% {
+        transform: translateX(0%);
+    }
+
+    33% {
+        transform: translateX(-100%);
+    }
+
+    66% {
+        transform: translateX(-200%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* About preview section */
+.about-preview {
+    padding: 50px 20px;
+    background: whitesmoke;
+    text-align: center;
+}
+
+.about-preview h2 {
+    color: #003366;
+    font-size: 2.2em;
+    margin-bottom: 15px;
+}
+
+.about-preview p {
+    font-size: 1.15em;
+    line-height: 1.7;
+    color: #444;
+}
+
+/* Testimonials section */
+.testimonials {
+    background: linear-gradient(to right, #87d175, #30c4d8);
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: #003366;
+}
+
+.testimonial-carousel {
+    overflow: hidden;
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.testimonial-track {
+    display: flex;
+    animation: scrollTestimonials 40s linear infinite;
+    width: calc(300px * 8);
+}
+
+.testimonial {
+    flex: 0 0 300px;
+    margin: 0 10px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial p {
+    font-style: italic;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.testimonial h4 {
+    color: #006699;
+    font-weight: normal;
+}
+
+@keyframes scrollTestimonials {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-2400px);
+    }
+}
+
+/* Trust Badges section*/
+.trust-badges {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: #e8faff;
+    padding: 30px 0;
+}
+
+.badge-box {
+    background: white;
+    margin: 12px;
+    padding: 18px 28px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+    font-weight: bold;
+    color: #0056b3;
+}
+
+/* Promo Video section */
+.promo-video {
+    text-align: center;
+    padding: 50px 20px;
+    background: whitesmoke;
+}
+
+.promo-video h2 {
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+/* Highlights section */
+.highlights {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: #e6f7ff;
+    padding: 30px 0;
+}
+
+.highlight-box {
+    background: linear-gradient(135deg, #ffffff, #d9faff);
+    margin: 10px;
+    padding: 18px 28px;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* TripAdvisor Banner section */
+.tripadvisor-banner {
+    background: linear-gradient(to right, #d4f8d4, #b0e6f2);
+    padding: 35px 25px;
+    margin: 50px auto;
+    text-align: center;
+    border-radius: 14px;
+    box-shadow: 0 12px 24px rgba(0, 128, 0, 0.15);
+    max-width: 1000px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tripadvisor-banner:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 32px rgba(0, 128, 0, 0.25);
+}
+
+.tripadvisor-banner img {
+    max-width: 320px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 18px;
+    filter: none !important;
+}
+
+.tripadvisor-banner p {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #046307;
+}
+
+/* Footer section */
+.site-footer {
+    background: linear-gradient(90deg, #00c853, #2196f3);
+    color: white;
+    text-align: center;
+    padding: 30px 10px;
+}
+
+.site-footer a {
+    color: white;
+    text-decoration: underline;
+    transition: color 0.3s;
+}
+
+.site-footer a:hover {
+    color: #0c09d1;
+}
+
+.footer-contact p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.footer-contact i {
+    margin-right: 8px;
+}
+
+.footer-social {
+    margin-top: 20px;
+}
+
+.footer-social p {
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.footer-social-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.footer-social-icons a {
+    margin: 10px;
+    font-size: 28px;
+    display: inline-block;
+    vertical-align: middle;
+    transition: transform 0.3s ease;
+}
+
+.footer-social-icons a:hover {
+    transform: scale(1.2);
+}
+
+/* TripAdvisor logo as image in the footer */
+.footer-social-icons img.tripadvisor-icon {
+    height: 30px;
+    vertical-align: middle;
+    margin: 5px 10px;
+    transition: transform 0.3s ease;
+    filter: none;
+}
+
+.footer-social-icons img.tripadvisor-icon:hover {
+    transform: scale(1.2);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    margin-top: 25px;
+    font-size: 14px;
+}
+
+/* WhatsApp Floating Button */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25d366;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 35px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.whatsapp-float:hover {
+    background-color: #128c45;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        margin: 5px 10px;
+        font-size: 14px;
+    }
+
+    .banner-slide img {
+        width: 100%;
+        height: auto;
+    }
+
+    .banner-text {
+        left: 5%;
+        right: 5%;
+        top: 20%;
+        text-align: center;
+    }
+
+    .about-preview,
+    .testimonials,
+    .promo-video,
+    .trust-badges,
+    .highlights {
+        padding: 30px 10px;
+    }
+
+    .testimonial-track {
+        flex-wrap: wrap;
+        animation: none;
+        justify-content: center;
+    }
+
+    .testimonial {
+        flex: 1 1 90%;
+        margin: 10px 0;
+    }
+
+    .highlight-box,
+    .badge-box {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    iframe {
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    .footer-social-icons {
+        flex-wrap: wrap;
+    }
+
+    .tripadvisor-banner img {
+        max-width: 80%;
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 0.95em;
+    }
+}
+
+/* Responsive Youtube Video */
+.promo-video iframe {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    border: none;
+}
+
+/* Responsive Testimonials */
+@media (max-width: 768px) {
+    .testimonial-carousel {
+        overflow: visible;
+        padding: 0 10px;
+        /* add horizontal padding to avoid clipping */
+        box-sizing: border-box;
+    }
+
+    .testimonial-track {
+        flex-direction: column;
+        animation: none;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .testimonial {
+        flex: 1 1 100%;
+        width: 100%;
+        margin: 10px 0;
+        /* remove horizontal margin, only vertical */
+        box-sizing: border-box;
+        padding: 15px;
+        /* optional for spacing inside each testimonial */
+    }
+}
+
+.testimonial {
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+
+    .footer-contact p,
+    .footer-social p,
+    .footer-bottom {
+        font-size: 14px;
+    }
+
+    .footer-social-icons {
+        flex-wrap: wrap;
+        gap: 8px;
+        justify-content: center;
+    }
+
+    .footer-social-icons a,
+    .footer-social-icons img.tripadvisor-icon {
+        font-size: 22px;
+        margin: 5px;
+    }
+
+    .footer-contact {
+        padding-bottom: 10px;
+    }
+}
+
+/* Responsive Trip Advisor */
+@media (max-width: 600px) {
+    .tripadvisor-banner {
+        padding: 25px 15px;
+    }
+
+    .tripadvisor-btn {
+        font-size: 0.95em;
+        padding: 8px 18px;
+    }
+
+    .tripadvisor-banner p {
+        font-size: 1em;
+    }
+}
+
+/* General nav link style */
+nav a {
+    color: #333;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+/* Highlight the active tab */
+nav a.active {
+    background-color: #85e62b;
+    /* blue background */
+    color: white;
+    /* white text */
+    border-radius: 5px;
+    font-weight: bold;
+}

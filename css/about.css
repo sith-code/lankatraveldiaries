@@ -1,0 +1,113 @@
+/* About Page Styles */
+
+.about-main {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.1);
+    color: #333;
+}
+
+.about-main h2,
+.about-main h3 {
+    color: #007bff;
+    margin-bottom: 15px;
+    font-weight: 700;
+    border-bottom: 3px solid #28a745;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.about-main p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* Quote */
+.quote-section {
+    background: #e6f7ff;
+    padding: 20px;
+    border-left: 5px solid #28a745;
+    margin: 30px 0;
+    font-style: italic;
+    font-size: 1.2em;
+}
+
+.quote-section span {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.95em;
+    text-align: right;
+    color: #555;
+}
+
+/* Featured Image */
+.featured-image {
+    margin: 30px 0;
+    text-align: center;
+}
+
+.featured-image img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Fun Facts */
+.fun-facts ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.fun-facts li {
+    background: #f0f8ff;
+    margin-bottom: 10px;
+    padding: 12px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* CTA Section */
+.cta-section {
+    text-align: center;
+    padding: 30px 0;
+    background-color: #e6f7ff;
+    border-radius: 10px;
+    margin-top: 40px;
+}
+
+.cta-section h3 {
+    color: #28a745;
+}
+
+.cta-button {
+    display: inline-block;
+    background: #28a745;
+    color: white;
+    padding: 12px 25px;
+    margin-top: 15px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 1em;
+    transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #1e7e34;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about-main {
+        padding: 20px 15px;
+    }
+
+    .featured-image img {
+        max-height: 250px;
+    }
+}

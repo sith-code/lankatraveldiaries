@@ -1,0 +1,108 @@
+/* Bookings Section */
+.bookings {
+    background: #f5faff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.bookings .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.bookings h2 {
+    font-size: 2.5em;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.intro-text {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    color: #444;
+}
+
+.booking-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.booking-method {
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px 20px;
+    width: 280px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.booking-method:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.booking-method i {
+    font-size: 40px;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.booking-method h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.booking-method p {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.booking-button {
+    display: inline-block;
+    background: #25d366;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.booking-button:hover {
+    background: #128c45;
+}
+
+/* Social links inside booking cards */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-links a {
+    font-size: 28px;
+    color: #555;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #007bff;
+    transform: scale(1.2);
+}
+
+/* For mobile responsiveness*/
+@media (max-width: 768px) {
+    .booking-options {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .booking-method {
+        width: 90%;
+    }
+}
