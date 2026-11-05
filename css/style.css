@@ -599,6 +599,13 @@ nav a.active {
     font-weight: bold;
 }
 
+/* Sticky Navigation */
+.sticky-nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
 
 /* =====================================
    HEADER - SCROLL AWAY COMPLETELY
