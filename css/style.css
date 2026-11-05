@@ -606,3 +606,18 @@ nav a.active {
     z-index: 1000;
     width: 100%;
 }
+
+/* Header must scroll normally */
+header {
+    position: static !important;
+    top: auto !important;
+    z-index: auto;
+}
+
+/* Only navigation stays fixed */
+.sticky-nav {
+    position: sticky !important;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
