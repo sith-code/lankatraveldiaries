@@ -599,25 +599,29 @@ nav a.active {
     font-weight: bold;
 }
 
-/* Sticky Navigation */
-.sticky-nav {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    width: 100%;
-}
 
-/* Header must scroll normally */
-header {
+/* =====================================
+   HEADER - SCROLL AWAY COMPLETELY
+===================================== */
+
+header,
+header .header-wrapper {
     position: static !important;
     top: auto !important;
-    z-index: auto;
+    bottom: auto !important;
+    transform: none !important;
+    z-index: auto !important;
 }
 
-/* Only navigation stays fixed */
-.sticky-nav {
+/* =====================================
+   ONLY NAVIGATION STAYS AT THE TOP
+===================================== */
+
+nav.sticky-nav {
     position: sticky !important;
-    top: 0;
-    z-index: 1000;
+    top: 0 !important;
+    left: auto;
+    right: auto;
     width: 100%;
+    z-index: 9999;
 }
