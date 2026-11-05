@@ -599,36 +599,39 @@ nav a.active {
     font-weight: bold;
 }
 
-/* Sticky Navigation */
-.sticky-nav {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    width: 100%;
-}
+/* =========================================
+   LANKA TRAVEL DIARIES - SCROLL BEHAVIOUR
+========================================= */
 
-/* =====================================
-   HEADER - SCROLL AWAY COMPLETELY
-===================================== */
-
-header,
-header .header-wrapper {
-    position: static !important;
+/* HEADER: LOGO, TITLE AND TAGLINE SCROLL AWAY */
+body > header,
+header {
+    position: relative !important;
     top: auto !important;
     bottom: auto !important;
     transform: none !important;
-    z-index: auto !important;
+    z-index: 1 !important;
 }
 
-/* =====================================
-   ONLY NAVIGATION STAYS AT THE TOP
-===================================== */
+/* HEADER CONTENT */
+.header-wrapper {
+    position: relative !important;
+    top: auto !important;
+    transform: none !important;
+}
 
+/* NAVIGATION: ONLY THIS BAR STAYS AT TOP */
 nav.sticky-nav {
     position: sticky !important;
     top: 0 !important;
-    left: auto;
-    right: auto;
+    left: auto !important;
+    right: auto !important;
     width: 100%;
-    z-index: 9999;
+    z-index: 9999 !important;
+    margin-top: 0;
+}
+
+/* PREVENT STICKY ANCESTOR CONFLICTS */
+body {
+    overflow-x: hidden;
 }
